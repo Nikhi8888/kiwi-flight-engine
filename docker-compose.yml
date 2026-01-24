@@ -20,16 +20,16 @@ services:
 
   # 2. THE MUSCLE (The Browser)
   browser:
-      # Now pulls YOUR optimized image
-      image: abdallahthegreatest/kiwi-browser:v1.57.0
-      container_name: kiwi-browser
-      expose:
-        - "3000"
-      healthcheck:
-        # Now we can check the connection properly
-        test: ["CMD-SHELL", "curl -f http://localhost:3000/ || exit 1"]
-        interval: 10s
-      restart: always
+    # Now pulls YOUR optimized image
+    image: abdallahthegreatest/kiwi-browser:v1.57.0
+    container_name: kiwi-browser
+    expose:
+      - "3000"
+    healthcheck:
+      # Now we can check the connection properly
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/ || exit 1"]
+      interval: 10s
+    restart: always
 
   # NOTE: browserless/chrome is for Puppeteer, not Playwright - commenting out
   # browser:

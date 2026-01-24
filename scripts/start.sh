@@ -14,7 +14,7 @@ docker pull abdallahthegreatest/kiwi-engine:0.1.0
 
 # 3. Start the engine
 echo "🚀 Ignition..."
-docker-compose up -d
+docker compose up -d
 
 echo ""
 echo "✅ SUCCESS! The engine is running."
