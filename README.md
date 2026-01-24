@@ -12,6 +12,16 @@ The sole purpose of this project is educational: to learn about Docker, API inte
 
 ---
 
+## TL;DR
+
+**Windows:** Double-click `scripts/start.bat`
+
+**Mac/Linux:** Run `scripts/start.sh`
+
+Then open [http://localhost:8000/docs](http://localhost:8000/docs)
+
+---
+
 ## What is this?
 
 A self-hosted flight search API consisting of two Docker containers:
