@@ -12,7 +12,7 @@ IF %ERRORLEVEL% NEQ 0 (
 
 :: 2. Run
 echo 🚀 Ignition...
-docker-compose up -d
+docker compose up -d
 
 echo.
 echo ✅ SUCCESS! The engine is running.
