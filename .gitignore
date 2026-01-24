@@ -1,0 +1,6 @@
+# my Folders
+*data*/
+data/
+
+# my Files
+.env*

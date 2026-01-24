@@ -1,0 +1,52 @@
+name: kiwi-engine
+
+services:
+  # 1. THE BRAIN (Your Code)
+  kiwi:
+    image: abdallahthegreatest/kiwi-engine:latest
+    container_name: kiwi-logic
+    depends_on:
+      browser:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    environment:
+      # Magic string that tells Python to look at the other container
+      - PLAYWRIGHT_WS_ENDPOINT=ws://browser:3000
+    volumes:
+      - ./kiwi_data:/data
+    command: ["server", "--host", "0.0.0.0"]
+    restart: always
+
+  # 2. THE MUSCLE (The Browser)
+  browser:
+      # Now pulls YOUR optimized image
+      image: abdallahthegreatest/kiwi-browser:v1.57.0
+      container_name: kiwi-browser
+      expose:
+        - "3000"
+      healthcheck:
+        # Now we can check the connection properly
+        test: ["CMD-SHELL", "curl -f http://localhost:3000/ || exit 1"]
+        interval: 10s
+      restart: always
+
+  # NOTE: browserless/chrome is for Puppeteer, not Playwright - commenting out
+  # browser:
+  #   image: browserless/chrome:latest
+  #   container_name: kiwi-browser
+  #   expose:
+  #     - "3000"
+  #   ports:
+  #     # Optional: Expose 3000 if you want to debug the browser visually
+  #     - "3000:3000"
+  #   environment:
+  #     # Connection timeout settings
+  #     - CONNECTION_TIMEOUT=60000
+  #     - MAX_CONCURRENT_SESSIONS=5
+  #   shm_size: "2gb"
+  #   healthcheck:
+  #     test: ["CMD", "wget", "-q", "-O", "-", "http://localhost:3000/json/version"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 3
