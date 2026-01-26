@@ -6,17 +6,17 @@
 
 | Name | Required | Default | Used by | Description | Source |
 |------|----------|---------|---------|-------------|--------|
-| `KIWI_BASE_URL` | No | `https://api.skypicker.com/umbrella/v2/graphql` | `KiwiSession` | Kiwi.com GraphQL API endpoint | [config.py](src/kiwi_sdk/config.py:96) |
-| `KIWI_REAL_CALL` | No | `1` | `KiwiSession` | Enable real API calls (`1`) or mock mode (`0`) | [config.py](src/kiwi_sdk/config.py:98) |
-| `TIMEOUT_SECONDS` | No | `30.0` | `KiwiSession` | HTTP request timeout in seconds | [config.py](src/kiwi_sdk/config.py:99) |
-| `USER_AGENT` | No | `Mozilla/5.0...` | `KiwiSession` | User agent string for HTTP requests | [config.py](src/kiwi_sdk/config.py:101) |
+| `KIWI_BASE_URL` | No | `https://api.skypicker.com/umbrella/v2/graphql` | `KiwiSession` | Kiwi.com GraphQL API endpoint | `src/kiwi_sdk/config.py:96` |
+| `KIWI_REAL_CALL` | No | `1` | `KiwiSession` | Enable real API calls (`1`) or mock mode (`0`) | `src/kiwi_sdk/config.py:98` |
+| `TIMEOUT_SECONDS` | No | `30.0` | `KiwiSession` | HTTP request timeout in seconds | `src/kiwi_sdk/config.py:99` |
+| `USER_AGENT` | No | `Mozilla/5.0...` | `KiwiSession` | User agent string for HTTP requests | `src/kiwi_sdk/config.py:101` |
 
 ### Browser settings
 
 | Name | Required | Default | Used by | Description | Source |
 |------|----------|---------|---------|-------------|--------|
-| `PLAYWRIGHT_WS_ENDPOINT` | Yes* | - | `Browser` | WebSocket endpoint for Playwright browser service (e.g., `ws://browser:3000`) | [browser.py](src/kiwi_sdk/core/browser.py:22) |
-| `BROWSER_TIMEOUT` | No | `30` | `Browser` | Max seconds to wait for GraphQL request interception | [config.py](src/kiwi_sdk/config.py:100) |
+| `PLAYWRIGHT_WS_ENDPOINT` | Yes* | - | `Browser` | WebSocket endpoint for Playwright browser service (e.g., `ws://browser:3000`) | `src/kiwi_sdk/core/browser.py:22` |
+| `BROWSER_TIMEOUT` | No | `30` | `Browser` | Max seconds to wait for GraphQL request interception | `src/kiwi_sdk/config.py:100` |
 
 *Required when running in Docker Compose. Optional for local development with local Playwright.
 
@@ -24,19 +24,19 @@
 
 | Setting | Default | Description | Source |
 |---------|---------|-------------|--------|
-| `search_ttl_seconds` | `600` (10 min) | Search result cache TTL | [config.py](src/kiwi_sdk/config.py:11) |
-| `search_max_size` | `256` | Search result cache max entries | [config.py](src/kiwi_sdk/config.py:12) |
-| `calendar_context_ttl_seconds` | `3600` (60 min) | Calendar context cache TTL | [config.py](src/kiwi_sdk/config.py:13) |
-| `calendar_context_max_size` | `512` | Calendar context cache max entries | [config.py](src/kiwi_sdk/config.py:14) |
-| `calendar_prices_ttl_seconds` | `3600` (60 min) | Calendar prices cache TTL | [config.py](src/kiwi_sdk/config.py:15) |
-| `calendar_prices_max_size` | `512` | Calendar prices cache max entries | [config.py](src/kiwi_sdk/config.py:16) |
+| `search_ttl_seconds` | `600` (10 min) | Search result cache TTL | `src/kiwi_sdk/config.py:11` |
+| `search_max_size` | `256` | Search result cache max entries | `src/kiwi_sdk/config.py:12` |
+| `calendar_context_ttl_seconds` | `3600` (60 min) | Calendar context cache TTL | `src/kiwi_sdk/config.py:13` |
+| `calendar_context_max_size` | `512` | Calendar context cache max entries | `src/kiwi_sdk/config.py:14` |
+| `calendar_prices_ttl_seconds` | `3600` (60 min) | Calendar prices cache TTL | `src/kiwi_sdk/config.py:15` |
+| `calendar_prices_max_size` | `512` | Calendar prices cache max entries | `src/kiwi_sdk/config.py:16` |
 
 ### Query defaults (in-code defaults)
 
 | Setting | Default | Description | Source |
 |---------|---------|-------------|--------|
-| `default_currency` | `EUR` | Default currency for searches | [config.py](src/kiwi_sdk/config.py:24) |
-| `default_sort` | `PRICE` | Default sort order | [config.py](src/kiwi_sdk/config.py:25) |
+| `default_currency` | `EUR` | Default currency for searches | `src/kiwi_sdk/config.py:24` |
+| `default_sort` | `PRICE` | Default sort order | `src/kiwi_sdk/config.py:25` |
 
 ## Docker Compose configuration
 
@@ -143,16 +143,16 @@ Multi-stage build:
 
 | Setting | Value | Description | Source |
 |---------|-------|-------------|--------|
-| `CIRCUIT_MAX_FAILURES` | 3 | Failures before opening circuit | [endpoints.py](src/kiwi_sdk/api/endpoints.py:31) |
-| `CIRCUIT_RESET_SECONDS` | 120 (2 min) | Cooldown before retry | [endpoints.py](src/kiwi_sdk/api/endpoints.py:32) |
+| `CIRCUIT_MAX_FAILURES` | 3 | Failures before opening circuit | `src/kiwi_sdk/api/endpoints.py:31` |
+| `CIRCUIT_RESET_SECONDS` | 120 (2 min) | Cooldown before retry | `src/kiwi_sdk/api/endpoints.py:32` |
 
 ### Token refresh
 
 | Setting | Value | Description | Source |
 |---------|-------|-------------|--------|
-| `REFRESH_INTERVAL_SECONDS` | 900 (15 min) | Background refresh interval | [endpoints.py](src/kiwi_sdk/api/endpoints.py:29) |
-| `TOKEN_MAX_AGE_SECONDS` | 600 (10 min) | Reuse tokens if younger than this | [endpoints.py](src/kiwi_sdk/api/endpoints.py:30) |
-| `REFRESH_RETRY_ATTEMPTS` | 3 | Retry attempts for token refresh | [endpoints.py](src/kiwi_sdk/api/endpoints.py:33) |
+| `REFRESH_INTERVAL_SECONDS` | 900 (15 min) | Background refresh interval | `src/kiwi_sdk/api/endpoints.py:29` |
+| `TOKEN_MAX_AGE_SECONDS` | 600 (10 min) | Reuse tokens if younger than this | `src/kiwi_sdk/api/endpoints.py:30` |
+| `REFRESH_RETRY_ATTEMPTS` | 3 | Retry attempts for token refresh | `src/kiwi_sdk/api/endpoints.py:33` |
 
 ### Cache limits
 

@@ -13,7 +13,7 @@ The services communicate via a WebSocket connection (`PLAYWRIGHT_WS_ENDPOINT`) a
 
 ### API Service (`kiwi-logic`)
 
-The main FastAPI application ([`src/kiwi_sdk/api/`](src/kiwi_sdk/api/)) composed of:
+The main FastAPI application (`src/kiwi_sdk/api/`) composed of:
 
 | Component | File | Responsibility |
 |-----------|------|----------------|

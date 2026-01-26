@@ -43,7 +43,7 @@ Simple health check endpoint.
 }
 ```
 
-**Source**: [endpoints.py:501](src/kiwi_sdk/api/endpoints.py:501)
+**Source**: `src/kiwi_sdk/api/endpoints.py:501`
 
 #### GET /meta/status
 
@@ -60,7 +60,7 @@ Returns token metadata including age and source.
 
 **Status values**: `active`, `missing`, `unknown`
 
-**Source**: [endpoints.py:506](src/kiwi_sdk/api/endpoints.py:506)
+**Source**: `src/kiwi_sdk/api/endpoints.py:506`
 
 ### Token Management
 
@@ -87,7 +87,7 @@ Manually trigger a token refresh from the browser service.
 }
 ```
 
-**Source**: [endpoints.py:525](src/kiwi_sdk/api/endpoints.py:525)
+**Source**: `src/kiwi_sdk/api/endpoints.py:525`
 
 ### Flight Search
 
@@ -196,7 +196,7 @@ Search for flights (one-way or round trip) with flexible options. The endpoint a
 | 400 | Invalid request payload (validation error) |
 | 500 | Upstream Kiwi API error |
 
-**Source**: [endpoints.py:540](src/kiwi_sdk/api/endpoints.py:540)
+**Source**: `src/kiwi_sdk/api/endpoints.py:540`
 
 #### POST /v1/flights/search/scored
 
@@ -265,7 +265,7 @@ Same as `/v1/flights/search` but adds "greed scoring" to each itinerary based on
 | `EXPENSIVE` | 1.5 < Z ≤ 2.0 | Expensive |
 | `RIP_OFF` | Z > 2.0 | Very expensive |
 
-**Source**: [endpoints.py:582](src/kiwi_sdk/api/endpoints.py:582)
+**Source**: `src/kiwi_sdk/api/endpoints.py:582`
 
 ### Calendar Prices
 
@@ -340,7 +340,7 @@ Fetch calendar price data with market statistics for a date range.
 }
 ```
 
-**Source**: [endpoints.py:563](src/kiwi_sdk/api/endpoints.py:563)
+**Source**: `src/kiwi_sdk/api/endpoints.py:563`
 
 ## Example requests
 

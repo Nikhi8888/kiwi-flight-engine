@@ -164,7 +164,7 @@ docker logs kiwi-resilient-sdk-kiwi-logic-1 | grep circuit
 curl http://localhost:8000/meta/status
 ```
 
-**Cause**: 3 consecutive token refresh failures triggered the circuit breaker ([endpoints.py:31](src/kiwi_sdk/api/endpoints.py:31)).
+**Cause**: 3 consecutive token refresh failures triggered the circuit breaker (`src/kiwi_sdk/api/endpoints.py:31`).
 
 **Fix**:
 1. Wait 2 minutes for automatic reset (`CIRCUIT_RESET_SECONDS`)
@@ -192,7 +192,7 @@ curl http://localhost:8000/meta/status
 }
 ```
 
-**Fix**: Validate request payload against schema in [models.py](src/kiwi_sdk/api/models.py).
+**Fix**: Validate request payload against schema in `src/kiwi_sdk/api/models.py`.
 
 ### 500 Internal Server Error - Kiwi API error
 
@@ -270,7 +270,7 @@ docker exec kiwi-resilient-sdk-kiwi-logic-1 ls -la /data/
 
 **Fix**:
 - Ensure `/data` directory exists and is writable
-- Database is created automatically by [token_store.py](src/kiwi_sdk/api/token_store.py)
+- Database is created automatically by `src/kiwi_sdk/api/token_store.py`
 
 ## Logging and debugging
 
