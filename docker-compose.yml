@@ -36,23 +36,3 @@ services:
       test: ["CMD-SHELL", "curl -f http://localhost:3000/ || exit 1"]
       interval: 10s
     restart: always
-
-  # NOTE: browserless/chrome is for Puppeteer, not Playwright - commenting out
-  # browser:
-  #   image: browserless/chrome:latest
-  #   container_name: kiwi-browser
-  #   expose:
-  #     - "3000"
-  #   ports:
-  #     # Optional: Expose 3000 if you want to debug the browser visually
-  #     - "3000:3000"
-  #   environment:
-  #     # Connection timeout settings
-  #     - CONNECTION_TIMEOUT=60000
-  #     - MAX_CONCURRENT_SESSIONS=5
-  #   shm_size: "2gb"
-  #   healthcheck:
-  #     test: ["CMD", "wget", "-q", "-O", "-", "http://localhost:3000/json/version"]
-  #     interval: 10s
-  #     timeout: 5s
-  #     retries: 3
